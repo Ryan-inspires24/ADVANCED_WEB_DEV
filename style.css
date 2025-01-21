@@ -1,0 +1,58 @@
+/* Styles for the AMC Business Directory */
+
+body {
+    
+    height: 150vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #e12626;
+    padding: 1em;
+    text-align: center;
+    font-size: 30px;
+    border-width: 2px;
+}
+
+.body {
+    
+    background-color: blanchedalmond;
+    text-align: left;
+    width: 250px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    float: left;
+    
+    height: 400px;
+
+}
+
+.Login {
+    margin-top: 10px;
+    padding: 2em;
+    text-align: right;
+    width: 30px;
+    border:15px solid red;
+    float:right
+}
+
+.Register {
+    
+    margin-bottom: 10px;
+    padding: 2em;
+    align-self: end;
+    text-align: right;
+    width: 30px;
+    border: 15px solid blue;
+    float:right;
+    font-weight: bold;
+    height: 200px;
+}
+
+footer {
+    background-color: #f4f4f4;
+     padding: 1em; 
+     text-align: center;
+}
