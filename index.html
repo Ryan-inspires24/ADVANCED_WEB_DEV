@@ -3,30 +3,89 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="This is a business platform">
-  <meta name="keywords" content="business, directory, amc">
-  <link rel="stylesheet" href="style.css">
-
-  <title></title>
+  <meta name="description" content="This is a business directory" />
+  <meta name="keywords" content="business, directory, amc" />
+  <title>Welcome to My Website</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <header>
-    The AMC Business Directory
-  </header>
-  <main>
-    <aside class="body">
-      <h1>Showcase Your Business to the World!</h1>
-    </aside>
-    <aside class="entry">
-      <p>Login or Register</p>
-    </aside>
+  <div id="wrapper">
+    <header id="header">
+      <h1>The AMC Business Directory</h1>
+    </header>
+    <hr><a href="welcomePage.html">Welcome Page</a><a href="accountPage.hmtl"> accountPage</a><a href="accountPage.html"> accountPage</a><a href="publicListing.html"> Public Listing Page</a><a href="detailedListing.html"> Detailed Page</a></hr>
+    <main id="main">
+      <aside id="content">
+        <h1 class="alert">Showcase Your Business to the World!</h1>
+        <h3>Hello there!</h3>
+        <p>Are you a business owner, entrepreneur, or self-employed person
+          stuggling to find a market to showcase your products?
+        </p>
+        <p>Welcome to the <span>AMC Business Directory</span>;
+          A platform which gives you the following facilities to help optimize your business.
 
-    </aside>
-    <footer>
-<P>This is the end of my page</P>
-    </footer>
-  </main>
+        </p>
+        <ul>
+          <li>Access to a <span>A global Market</span> through social media links.</li>
+          <li><span>Free Listing, and affordable premium opportunities</span> to help boost your business </li>
+          <li><span>Easily contact clients through your profile.</span></li>
+        </ul>
+        <p>
+          Take your business off in grand style with <span>The AMC Business Directory.</span>
+        </p>
+
+      </aside>
+      <aside id="actions">
+        <div id="login-form">
+          <h2>Login</h2>
+          <p><label>Enter your Email Address: </label>
+            <input type=" email" , id="currentEmail">
+          </p>
+          <p><label>Enter your password: </label>
+            <input type="password" , id="currentPassword">
+          </p>
+          <p><button id="loginButton" , type="button">Login</button></p>
+
+        </div>
+        <div id="register-form">
+          <h2>Register</h2>
+
+          <p>Fill the following form to create an account and join our community.</p>
+          
+          <label>Enter your First Name: </label>
+          <input type="text" , id="fname" , placeholder="Ryan">
+          
+          <p><label>Enter your Last Name: </label>
+            <input type="text" , id="lname" , placeholder="Kinsa">
+          </p>
+          
+          <p><label>Enter your Email Address: </label>
+            <input type="email" , id="email" , placeholder="ryan@mail.com">
+          </p>
+          
+          <P><label>Create your email: </label>
+            <input type="email" , id="newEmail">
+          </P>
+          
+          <p>
+            <label>Create a password: </label>
+            <input type="password" , id="newPassword">
+          </p>
+          
+          <p>
+            <label>Verify your password: </label>
+            <input type="password">
+          </p>
+          
+          <p><button type="button" , id="registerButton">Register</button></p>
+          </p>
+        </div>
+      </aside>
+
+    </main>
+    <footer id="footer">&copy; Alma Maters Club (AMC). All rights reserved.</footer>
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,128 @@
+/* Global Styles (Strength: 1) */
+p {
+    color: rgb(17, 17, 48);
+    padding: 7px;
+    font-size: 18px;
+}
+
+/* Class Styles (Strength: 10) */
+
+.alert {
+    color: rgb(81, 49, 23) !important;
+    font-size: 2em;
+    background-color: rgb(231, 160, 17);
+}
+
+.catchy {
+    color: rgb(128, 23, 0);
+}
+
+/* ID Styles (Strength: 100) */
+
+#actions_title {
+    font-size: 3em;
+    color: aqua;
+}
+
+/* An inline style is the most specific rule you can apply. */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#wrapper {
+    background-color: rgba(225, 184, 34, 0.458);
+    padding: 0.5em;
+}
+
+h3 {
+    padding: 15px;
+    font-size: 25px;
+}
+
+#header {
+    background-color: rgb(169, 94, 8);
+    height: 10vh;
+    text-align: center;
+}
+
+#main {
+    background-color: rgba(255, 228, 196, 0);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#content {
+    flex-grow: 2;
+    background-color: rgba(243, 232, 174, 0.467);
+}
+
+#actions {
+    flex-grow: 1;
+    background-color: rgba(255, 77, 0, 0.384);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#footer {
+    background-color: rgb(128, 4, 0);
+    min-height: 10vh;
+}
+
+#login-form {
+    text-align: center;
+    background-color: rgba(243, 155, 88, 0.648);
+    padding: 5px;
+    border-style: ridge;
+    border-radius: 15px;
+    border-color: rgb(200, 116, 14);
+
+}
+
+#register-form {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.297);
+    border-style: ridge;
+    border-radius: 15px;
+    border-color: rgb(245, 145, 14);
+}
+
+span {
+    font-weight: bold;
+}
+
+li {
+    padding: 7px;
+    background-color: rgba(245, 232, 220, 0.664);
+}
+
+a {
+    padding: 25px;
+}
+
+.navigationBar{
+background-color: brown;
+display: block;
+text-align: center;
+padding:  20px;
+}
+
+input{
+    border-width: 2px;
+    width: 200px;
+    height:25px;
+    border-radius: 10px;
+
+}
+
+button{
+    width: 100px;
+    border-radius: 10px;
+    background-color: brown;
+}
