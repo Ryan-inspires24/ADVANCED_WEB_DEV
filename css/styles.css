@@ -1,179 +1,208 @@
-/* Global Styles (Strength: 1) */
-p {
-    color: rgb(17, 17, 48);
-    padding: 7px;
-    font-size: 18px;
-}
-
-/* Class Styles (Strength: 10) */
-
-
-.catchy {
-    color: rgb(215, 200, 196);
-}
-
-/* ID Styles (Strength: 100) */
-
-#actions_title {
-    font-size: 3em;
-    color: aqua;
-}
-
-/* An inline style is the most specific rule you can apply. */
-
-* {
+ body, section {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    font-size: 10px;
+    max-width: 100%;
 }
 
 #wrapper {
-    background-color: rgba(18, 26, 130, 0.458);
-    padding: 0.5em;
-}
-
-h3 {
-    padding: 15px;
-    font-size: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #header {
-    background-color: rgb(40, 8, 169);
-    height: 15vh;
     text-align: center;
+    padding: 20px;
+    background-color: #0073e6;
+    color: #fff;
 }
 
-nav{
-    padding: 15px;
-  background-color: rgb(13, 10, 39);
-  
+#header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+#header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 #main {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 80vh;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 
 #content {
-    flex-grow: 2;
-    background-color: rgba(243, 232, 174, 0.467);
+    flex: 3;
+    padding: 20px;
+}
+
+#content h3 {
+    color: #0073e6;
+    font-size: 1.2em;
+}
+
+#content p {
+    line-height: 1.6;
+}
+
+#content img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #actions {
-    flex-grow: 1;
-    background-color: rgba(48, 55, 160, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ccc;
+}
+
+#actions h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+#actions p {
+    margin: 15px 0;
+}
+
+#actions label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+#actions input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#actions button,
+#li {
+    width: 100%;
+    padding: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#actions button:hover {
+    background-color: #005bb5;
+}
+
+#bottom {
+    margin-top: 20px;
+}
+
+#bottom ul {
+    list-style: none;
+    padding: 0;
+}
+
+#bottom ul li {
+    margin: 10px 0;
+}
+
+#bottom ul li a {
+    color: #19075d;
+}
+
+#bottom ul li a:hover {
+    text-decoration: underline;
+}
+
+#bottom {
+    background-color: #163c956f;
+    padding: 10px;
 }
 
 #footer {
-    background-color: rgba(207, 37, 31, 0);
-    min-height: 10vh;
-}
-
-#login-form {
     text-align: center;
-    background-color: rgba(88, 119, 243, 0.648);
-    padding: 5px;
-    border-style: ridge;
-    border-radius: 15px;
-    border-color: rgb(230, 224, 217);
-
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 0.8em;
 }
 
-#register-form {
-    padding: 5px;
-    text-align: center;
-    background-color: rgba(201, 145, 145, 0.297);
-    border-style: ridge;
-    border-radius: 15px;
-    border-color: rgb(226, 210, 190);
+di {
+    display: flex;
+    padding: 20px;
 }
 
-
-
-a {
-    padding: 55px;
-}
-
-
-input{
-    border-width: 2px;
-    width: 200px;
-    height:25px;
-    border-radius: 10px;
-}
-
-button{
-    width: 100px;
-    border-radius: 10px;
-    background-color: brown;
-}
-
-#listings {
-    margin-top: 30px;
-  }
-  
-  #listings .listing {
-    border: 1px solid #ddd;
-    padding: 15px;
+#listings  img{
+    height: auto;
     margin: 10px 0;
-  }
-  
-  #listings .listing h3 {
-    margin-top: 0;
-  }
-  
-  #listings .listing button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-  }
-  
-  #listings .listing button:hover {
-    background-color: #0056b3;
-  }
-  
-  body {
-    background-image: url('images/th.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section{
+    min-height: 100dvh;
+}
+
+@media screen and (min-width:600px) {
+    #main {
+        flex-direction: column;
+      }
+
+      #actions {
+        border-left: none;
+        border-top: 1px solid #ccc;
+   }
+   body{
+    font-size:20px;
+   }
+
+  #header h1 {
+    font-size: 2em;
   }
 
-   
-  @media screen and (max-width:600px) {
-    #actions{
-        align-content: center;
-        width:80%;
-        flex-direction: column;
-        
-    }
-    #main{
-        width:100%;
-        flex-direction: column;
-    }
+  #header h2 {
+    font-size: 1.2em;
   }
 
-  @media  screen and (min-width:600px) and (max-width:992px) {
-    #actions{
-        align-content: center;
-        width:80%;
-        flex-direction: column;
-        
-    }
-    #main{
-        width:100%;
-        flex-direction: column;
-    }
+  #content h3 {
+    font-size: 1em;
   }
-  }
+
+  nav a {
+    font-size: 1.5em;
+}
