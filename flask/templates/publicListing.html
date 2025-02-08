@@ -1,0 +1,34 @@
+<link href="static/styles.css" rel="stylesheet" type="text/css" />
+
+<header id="header">
+  <h1>Inspires Voyages</h1>
+  <h2>Tourism and Hospitality Business Directory of Cameroon</h2>
+</header>
+
+
+<nav> <a href="accountPage.html">Account page</a> <a href="publicListing.html">Public Listing page </a> <a href="detailedListing.html">detailed listing page</a></nav>
+
+
+<section id="listings">
+    <h2>Explore Our Listings</h2>
+<di>
+  <div id="listing">
+    {% for site in listing %}
+    <h3>
+      {{site.h3}}
+    </h3>
+    <img src="{{site.src}}">
+    <p>
+      {{site.p}}
+    </p>
+    <button type="button" class="visitButton"> Visit</button>
+    {% endfor %}
+  </div>
+</di>
+   
+{{a_variable}}
+  </section>
+  <footer id="footer">&copy; Alma Maters Club (AMC). All rights reserved.</footer>
+
+
+  
