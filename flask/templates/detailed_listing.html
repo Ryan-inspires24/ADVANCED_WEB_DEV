@@ -1,0 +1,48 @@
+
+<header id="header">
+    <h1>Inspires Voyages</h1>
+    <h2>Tourism and Hospitality Business Directory of Cameroon</h2>
+  </header>
+  
+  
+  <nav> <a href="accountPage.html">Account page</a> <a href="publicListing.html">Public Listing page </a> <a href="detailedListing.html">detailed listing page</a><a href="landing_page.html"> About page</a></nav>
+  
+  
+{% block page_content %}
+<link href="static/styles.css" rel="stylesheet" type="text/css" />
+<div>
+    <h1>Form</h1>
+    <h3>Create a Listing by filling this form</h3>
+    <form method="POST" enctype="multipart/form-data">
+        <p>
+            <label for="site_Name">Name of site:</label>
+            <input type="text" name="site_Name" placeholder="Name of site" id="site_Name" required>
+        </p>
+
+        <p>
+            <label for="description">Description of site:</label>
+            <textarea id="description" name="description" placeholder="Describe the site" required></textarea>
+        </p>
+        
+        <h3>Contact Info</h3>
+        <p>
+            <label for="number">Phone Number:</label>
+            <input id="number" name="number" type="tel" placeholder="123456789" required>
+        </p>  
+
+        <p>
+            <label for="email">Email Address:</label>
+            <input id="email" name="email" type="email" placeholder="example@domain.com" required>
+        </p>  
+        
+        <p>
+            <label for="picture">Picture:</label>
+            <input id="picture" name="picture" type="file">
+        </p>
+        
+        <p>
+            <button type="submit" name="upload" id="upload">Upload</button>
+        </p>
+    </form>
+</div>
+{% endblock %}

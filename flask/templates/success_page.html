@@ -1,0 +1,18 @@
+<link href="static/styles.css" rel="stylesheet" type="text/css" />
+{% block page_content %}
+
+<div>
+    <h1>Listing Uploaded Successfully!</h1>
+    <h3>Here are the details of the site you just listed:</h3>
+    <div class="listing">
+        <h2>{{ listing.name }}</h2>
+        <p><strong>Description:</strong> {{ listing.description }}</p>
+        <p><strong>Phone Number:</strong> {{ listing.phone Number }}</p>
+        <p><strong>Email Address:</strong> {{ listing.email }}</p>
+        <p><strong>Picture:</strong></p>
+        <img src="{{ url_for('static/;', filename=listing.image) }}" alt="{{ listing.name }}" width="300">
+    </div>
+</div>
+{% endblock %}
+
+{%endblock%}
