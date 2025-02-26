@@ -42,49 +42,55 @@
         <div id="login-form">
           <h2>Login</h2>
           <form method="POST" enctype="multipart/form-data">
-      
+
             <p><label>Enter your user name: </label>
               <input type="text" name="username" id="username">
             </p>
             <p><label>Enter your password: </label>
-              <input type="password"  name="password" id="currentPassword">
+              <input type="password" name="password" id="currentPassword">
             </p>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" class="actions">
           </form>
         </div>
 
         <div id="register-form">
+
           <h2>Register</h2>
+          <form method="POST" enctype="multipart/form-data">
+            <p>Fill the following form to create an account.</p>
 
-          <p>Fill the following form to create an account.</p>
+            <label>Enter your First Name: </label>
+            <input type="text" id="fname" placeholder="Ryan">
 
-          <label>Enter your First Name: </label>
-          <input type="text"  id="fname"  placeholder="Ryan">
+            <p><label>Enter your Last Name: </label>
+              <input type="text" id="lname" placeholder="Kinsa">
+            </p>
 
-          <p><label>Enter your Last Name: </label>
-            <input type="text" id="lname"  placeholder="Kinsa">
-          </p>
+            <p><label>Enter your username: </label></p>
+                <input type="text" id="newusername" name="newusername" required>
 
-          <p><label>Enter your Email Address: </label>
-            <input type="email" id="email" placeholder="ryan@mail.com">
-          </p>
+            <p><label>Enter your Email Address: </label>
+              <input type="email" id="email" name="email" placeholder="ryan@mail.com" required>
+            </p>
 
-          <P><label>Create your email: </label>
-            <input type="email" id="newEmail">
-          </P>
+            <P><label>Create your email: </label>
+              <input type="email" id="newEmail" name="newEmail" required>
+            </P>
 
-          <p>
-            <label>Create a password: </label>
-            <input type="password" , id="newPassword">
-          </p>
+            <p>
+              <label>Create a password: </label>
+              <input type="password" name="newPassword" id="newPassword">
+            </p>
 
-          <p>
-            <label>Verify your password: </label>
-            <input type="password">
-          </p>
+            <p>
+              <label>Verify your password: </label>
+              <input type="password">
+            </p>
 
-          <p><button type="button" , id="registerButton">Register</button></p>
-          </p>
+            <p><input type="button", value="register" class="actions"></p>
+            </p>
+
+          </form>
         </div>
       </aside>
 

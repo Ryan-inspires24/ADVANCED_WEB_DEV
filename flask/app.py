@@ -7,10 +7,12 @@ import mysql.connector
 app = Flask(__name__)
 app.secret_key = 'tourism_directory'
 
+#Created a route to render template to the landing page
 @app.route('/')
 def landing_page():
     return render_template('landing_page.html')
 
+#route to dynamically display the listings on the public listings page
 @app.route('/citing')
 def citing():
     sites = [
@@ -33,6 +35,7 @@ def citing():
 
     return render_template('publicListing.html', listing=sites)
 
+#route to upload a listing and save info to a json file
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
@@ -41,28 +44,28 @@ def upload():
         phone_number = request.form.get('number')
         email = request.form.get('email')
         image = request.files.get('picture')
-    #     listings = []
+        listings = []
 
         if image:
             file_path = os.path.join('static', image.filename)
             image.save(file_path)
 
-    #         listing = {
-    #             'name': name,
-    #             'description': description,
-    #             'phone_number': phone_number,
-    #             'email': email,
-    #             'image': file_path
-    #         }
+            listing = {
+                'name': name,
+                'description': description,
+                'phone_number': phone_number,
+                'email': email,
+                'image': file_path
+            }
 
-    #         listings.append(listing)
+            listings.append(listing)
 
-    #         with open('listings.json', 'w') as f:
-    #             json.dump(listings, f)
+            with open('listings.json', 'w') as f:
+                json.dump(listings, f)
 
-    #         return render_template('success_page.html',listing=listing)
+            return render_template('success_page.html',listing=listing)
     
-   
+#connecting my website to my database 
 conn = mysql.connector.connect(
     host="localhost", 
     user="ryan_inspires", 
@@ -71,11 +74,7 @@ conn = mysql.connector.connect(
     )
 cursor= conn.cursor()
 
-    
-
-    # return redirect(url_for('index'))
-
-
+#route to save detailed listings information my database
 @app.route('/save_to_db', methods=['GET', 'POST'])
 def save_to_db():
     if request.method == 'POST':
@@ -102,7 +101,8 @@ def save_to_db():
 if __name__ == '__main__':
     if not os.path.exists('static'):
         os.makedirs('static')
-        
+   
+#A route to enable user login information to be saved in sessions     
 @app.route('/login', methods=['GET','POST'])
 def login():
     logged_in = session.get("logged_in") if session.get("logged_in") else False
@@ -127,3 +127,5 @@ def login():
             return redirect(url_for('login'))
         
     return render_template('landing_page.html', username=username, password=password, logged_in=logged_in)
+
+# A route to store registered user information

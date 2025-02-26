@@ -113,7 +113,7 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-#actions button,
+.actions button,
 #li {
     width: 100%;
     padding: 10px;
@@ -125,7 +125,7 @@ nav a:hover {
     font-size: 1em;
 }
 
-#actions button:hover {
+.actions button:hover {
     background-color: #005bb5;
 }
 
