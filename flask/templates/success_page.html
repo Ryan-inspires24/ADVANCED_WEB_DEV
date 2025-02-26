@@ -7,7 +7,7 @@
     <div class="listing">
         <h2>{{ listing.name }}</h2>
         <p><strong>Description:</strong> {{ listing.description }}</p>
-        <p><strong>Phone Number:</strong> {{ listing.phone Number }}</p>
+        <p><strong>Phone Number:</strong> {{ listing.phone_number }}</p>
         <p><strong>Email Address:</strong> {{ listing.email }}</p>
         <p><strong>Picture:</strong></p>
         <img src="{{ url_for('static/;', filename=listing.image) }}" alt="{{ listing.name }}" width="300">
@@ -15,4 +15,3 @@
 </div>
 {% endblock %}
 
-{%endblock%}
