@@ -129,3 +129,23 @@ def login():
     return render_template('landing_page.html', username=username, password=password, logged_in=logged_in)
 
 # A route to store registered user information
+@app.route('/register', methods=['GET','POST'])
+def register():
+    if request.method == 'POST':
+        first_name = request.form.get('fname')
+        last_name = request.form.get('lname')
+        username = request.form.get('new_username')
+        email = request.form.get('email')
+        user_email = request.form.get('new_email')
+        password = request.form.get('new_password')
+        
+        query = 'INSERT INTO user(first_name, last_name, username, email, user_email, password) VALUES(%s, %s, %s, %s, %s, %s)'
+        values = (first_name, last_name, username, email, user_email, password)
+        cursor.execute(query, values)
+        conn.commit()
+        cursor.close()
+        conn.close()
+         
+        return f'Welcome {username}!'
+        
+    return render_template('landing_page.html')   
